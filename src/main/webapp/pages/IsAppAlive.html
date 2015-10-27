@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="messageApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Is App Alive</title>
+<link rel="stylesheet" href="../styles/bootstrap.css"></link>
+<script type="text/javascript" src="../scripts/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="../scripts/app/messageapp.js"></script> 
+</head>
+<body ng-controller="messageCtrl">
+	<br>
+	<br>
+	<div ng-class="['alert',  alertStatus]">
+	{{message}}
+	</div>
+</body>
+</html>
