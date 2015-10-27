@@ -10,6 +10,7 @@
   <properties>
 	<jdk.version>1.6</jdk.version>
 	<spring.version>3.2.13.RELEASE</spring.version>
+	<jackson-mapper-asl.version>1.9.12</jackson-mapper-asl.version>
 	<jstl.version>1.2</jstl.version>
 	<servletapi.version>3.1.0</servletapi.version>
 	<junit.version>3.7</junit.version>
@@ -21,13 +22,26 @@
       <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
+    <!-- spring hibernate validator -->
+    <dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>4.2.0.Final</version>
+	</dependency>
+    <!-- spring rest json conversion jackson library -->
+    <dependency>
+ 		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-mapper-asl</artifactId>
+		<version>${jackson-mapper-asl.version}</version>
+		<scope>runtime</scope>
+	</dependency>
     <!-- spring mvc dependency -->
     <dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-webmvc</artifactId>
 		<version>${spring.version}</version>
 	</dependency>
-
+	<!-- spring jsp expression  -->
 	<dependency>
 		<groupId>javax.servlet</groupId>
 		<artifactId>jstl</artifactId>
