@@ -16,7 +16,7 @@ public class HelloWorldController {
 	
 	@RequestMapping(value="helloworld", produces="application/json")
 	@ResponseBody
-	public MessageBean getHelloWorld(ModelMap modelMap){
+	public MessageBean getHelloWorld(){
 		System.out.println("helloworld controller method got executed");
 		MessageBean msgBean = new MessageBean("Angular JS with Spring REST Services are working fine!");
 		return msgBean;
