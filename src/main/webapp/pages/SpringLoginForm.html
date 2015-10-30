@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="loginApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Form</title>
+<link rel="stylesheet" href="../styles/bootstrap.css"></link>
+<script type="text/javascript" src="../scripts/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="../scripts/app/loginapp.js"></script>
+</head>
+<body>
+<div ng-class="['alert',  'alert-danger']">
+	To access the REST APIs, We need to Login into the system. So please login.. 
+</div>
+<div ng-controller="loginController as loginCtrl">
+  <form novalidate class="simple-form">
+  		<pre>UserName: <input type="text" ng-model="user.userName"></input> </pre><br><br>
+  		<pre>Password : <input type="password" ng-model="user.password"></input></pre><br>
+  		<input type="submit" ng-click="loginCtrl.doLogin(user)" ></input>
+  </form>
+  <div ng-show="msgPrompt">{{msgPrompt}}</div>
+</div>
+</body>
+</html>
